@@ -40,12 +40,12 @@ public class MainController {
         KeyFrame frame = new KeyFrame(Duration.seconds(0.09), e ->{
             // car1.move();
             for(Car car : carList) {
-                if(car.getX() + car.getWidth() > TARGET) {
+                if(car.getLayoutX() + car.getWidth() > TARGET) {
                     if(!resultList.getItems().contains(car.name)) {
                         resultList.getItems().add(car.name);
                     }
                 }
-                if(car.getX() < 560) {
+                if(car.getLayoutX() < 560) {
                     car.move();
                 }
             }
@@ -56,7 +56,7 @@ public class MainController {
     @FXML
     void onClickBackButton(ActionEvent event) {
         for(Car car : carList) {
-            car.setX(20);
+            car.setLayoutX(20);
         }
         timeline.stop();
         resultList.getItems().clear();

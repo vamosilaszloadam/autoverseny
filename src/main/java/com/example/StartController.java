@@ -42,7 +42,7 @@ public class StartController {
 
     @FXML
     void onClickAddButton(ActionEvent event) {
-        System.out.println("hozzáadás...");
+        // System.out.println("hozzáadás...");
         String name = nameField.getText();
         // String win = winCombo.getSelectionModel().getSelectedItem();
         String win = winCombo.getValue();
@@ -60,7 +60,7 @@ public class StartController {
 
     @FXML
     void onClickRaceButton(ActionEvent event) {
-        System.out.println("műkszik");
+        // System.out.println("műkszik");
         App.setRoot("mainScene");
     }
 
