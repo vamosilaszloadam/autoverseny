@@ -17,12 +17,21 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("mainScene"), 640, 480);
+        scene = new Scene(loadFXML("startScene"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
+    
+    public static void setRoot(String fxml) {
+        try {
+            trySetRoot(fxml);
+        } catch (IOException e) {
+            System.err.println("Hiba! Az FXML fájl betöltése sikertelen!");
+            System.err.println(e.getMessage());
+        }
+    }
 
-    static void setRoot(String fxml) throws IOException {
+    static void trySetRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

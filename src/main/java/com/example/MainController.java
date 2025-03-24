@@ -73,4 +73,10 @@ public class MainController {
         this.timeline.pause();
     }
 
+    @FXML
+    void onClickPreviousButton(ActionEvent event) {
+        System.out.println("vissza ok");
+        App.setRoot("startScene");
+    }
+
 }
